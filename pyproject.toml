@@ -1,3 +1,10 @@
+#[build-system]
+# Minimum requirements for the build system to execute.
+#requires = ["setuptools", "cython", "numpy"] # PEP 508 specification
 [build-system]
 # Minimum requirements for the build system to execute.
-requires = ["setuptools", "cython", "numpy"] # PEP 508 specification
+requires = [
+    "setuptools", "wheel", "numpy", "cython", "jinja2", "fluidpythran>=0.1.7"
+]
+# packages that are used during the build only if they are installed
+optional = ["mpi4py", "pythran"]
